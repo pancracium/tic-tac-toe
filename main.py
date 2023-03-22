@@ -15,6 +15,7 @@ class TicTacToeApp:
         self.board = [["", "", ""],
                       ["", "", ""],
                       ["", "", ""]]
+        self.font = ("Consolas", 100, "bold")
         #Create the widgets
         self.create_widgets()
 
@@ -25,7 +26,7 @@ class TicTacToeApp:
         for i in range(3):
             row = []
             for j in range(3):
-                button = tk.Button(self.master, text="", font=("Calibri", 100, "bold"), width=2, height=1,
+                button = tk.Button(self.master, text="", font=self.font, width=2, height=1,
                                    background="grey75", relief="flat", activebackground="grey75",
                                    borderwidth=0, highlightthickness=0,
                                    command=lambda x=i, y=j: self.play(x, y))

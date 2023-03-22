@@ -1,3 +1,5 @@
 When a player wins and some buttons turn green, you can keep clicking and adding X's and O's to other buttons, even though they disapper after a second.
 
 You can still click the buttons when they're green, making the text slightly move.
+
+It says "X wins!" when O wins, and that shouldn't happen.
