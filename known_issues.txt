@@ -3,3 +3,7 @@ When a player wins and some buttons turn green, you can keep clicking and adding
 You can still click the buttons when they're green, making the text slightly move.
 
 It says "X wins!" when O wins, and that shouldn't happen.
+
+The board doesn't reset when the last move was played by the random move button.
+
+When the board is full because of the previous issue and you click the random move button again, the game crashes.

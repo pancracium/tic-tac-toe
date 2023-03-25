@@ -2,6 +2,7 @@
 
 #Import necessary modules
 import tkinter as tk
+import randommove
 
 class TicTacToeApp:
     """Create a class for the app."""
@@ -19,6 +20,7 @@ class TicTacToeApp:
                       ["", "", ""],
                       ["", "", ""]]
         self.font = ("Consolas", 100, "bold")
+        self.random_button_font = ("Consolas", 20, "bold")
         #Create the widgets
         self.create_widgets()
 
@@ -41,6 +43,12 @@ class TicTacToeApp:
             self.master.grid_rowconfigure(i, weight=1)
         for i in range(3):
             self.master.grid_columnconfigure(i, weight=1)
+        #Button for playing a random move
+        self.random_button = tk.Button(self.master, text="Random Move", font=self.random_button_font, width=5, height=1,
+                               background="grey75", relief="flat", activebackground="grey75",
+                               borderwidth=0, highlightthickness=0,
+                               command=lambda: randommove.play(self))
+        self.random_button.grid(row=4, column=1, padx=10, pady=10, sticky="nsew")
 
     def play(self, x, y) -> str:
         """Make the game work."""
